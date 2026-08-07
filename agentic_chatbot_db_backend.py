@@ -23,6 +23,7 @@ class ChatState(TypedDict):
 
 def chat_node(state: ChatState):
     #take user query from state
+    
     messages = state['messages']
     # send to llm
     response = llm.invoke(messages)
@@ -46,13 +47,12 @@ graph.add_edge('chat_node', END)
 chatbot = graph.compile(checkpointer=checkpoint)
 
 
+def get_all_threads():
+    all_threads = set()
+    for ckpt in checkpoint.list(None):
+        all_threads.add(ckpt.config['configurable']['thread_id'])
 
-all_threads = set() 
-for ckpt in checkpoint.list(None):
-    all_threads.add(ckpt.config['configurable']['thread_id'])
-    
-print(all_threads)
-
-
+    return list(all_threads)
 
 
+   
