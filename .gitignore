@@ -1,0 +1,15 @@
+.env
+.venv/
+venv/
+langgraph-env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.db
+*.db-wal
+*.db-shm
+faiss_db/
+faiss_index/
+my_paper.pdf
