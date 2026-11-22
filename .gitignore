@@ -13,3 +13,5 @@ __pycache__/
 faiss_db/
 faiss_index/
 my_paper.pdf
+langgraph-env
+venv/
