@@ -1,0 +1,7 @@
+langgraph==1.2.0
+langchain-openai==1.2.1
+python-dotenv==1.2.2
+pydantic==2.10.4
+langchain-google-genai
+streamlit
+# End-to-End-Agentic-Chatbot
